@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+ <schema targetNamespace="http://tempuri.org/ims.xsd"
+  xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/"
+  xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+  xmlns:ims="http://tempuri.org/ims.xsd"
+  xmlns="http://www.w3.org/2001/XMLSchema"
+  elementFormDefault="unqualified"
+  attributeFormDefault="unqualified">
+  <import namespace="http://schemas.xmlsoap.org/soap/encoding/"/>
+  <!-- operation request element -->
+  <element name="sendMessage">
+   <complexType>
+    <sequence>
+     <element name="myMessage" type="ims:Message" minOccurs="1" maxOccurs="1"/><!-- ims__sendMessage::myMessage -->
+    </sequence>
+   </complexType>
+  </element>
+  <!-- operation response element -->
+  <element name="sendMessageResponse">
+   <complexType>
+    <sequence>
+     <element name="result" type="xsd:int" minOccurs="0" maxOccurs="1" nillable="true"/><!-- ims__sendMessage::result -->
+    </sequence>
+   </complexType>
+  </element>
+  <!-- operation request element -->
+  <element name="receiveMessage">
+   <complexType>
+    <sequence>
+    </sequence>
+   </complexType>
+  </element>
+  <!-- operation response element -->
+  <element name="receiveMessageResponse">
+   <complexType>
+    <sequence>
+     <element name="myMessage" type="ims:Message" minOccurs="0" maxOccurs="1" nillable="true"/><!-- ims__receiveMessage::myMessage -->
+    </sequence>
+   </complexType>
+  </element>
+ </schema>
+
